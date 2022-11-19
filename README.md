@@ -8,7 +8,7 @@
   ![Banner](https://github.com/Jefersoncf/odin-form/blob/main/img/banner.png)
   
   ## Link da página ao vivo
-   * [Fomulário de inscrição](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+   * [Fomulário de inscrição](https://jefersoncf.github.io/odin-form/)
   
   ## Tecnologias utilizadas
   
