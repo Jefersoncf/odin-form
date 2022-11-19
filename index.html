@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de inscrição</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container-left">
+        <div class="content-left">
+          <img
+            class="logo"
+            src="./img/odin-lined.png"
+            alt="Logo projeto Odin"
+          />
+          <h1>Odin</h1>
+        </div>
+        <p>Imagem baixada da web</p>
+      </div>
+
+      <div class="contaner-right">
+        <div class="content-rigth">
+          <p>
+            This is not online service! You know you need something<br />
+            like this in your life to help you realize your deepest dreams.<br />
+            Sign up now to get started.
+          </p>
+          <p class="p-separed">You know you want to.</p>
+        </div>
+
+        <div class="container-form">
+          <p class="title-form">Let's do this!</p>
+
+          <form action="" id="action">
+            <div class="input-wrapper">
+              <label for="first-name">First name</label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                required
+                minlength="3"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="last-name">Last name</label>
+              <input type="text" name="last-name" id="last-name" required />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="phone">phone number</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                required
+                minlength="9"
+                maxlength="9"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="password">password</label>
+              <input
+                class="password"
+                type="password"
+                name="password"
+                id="password"
+                required
+                minlength="4"
+                maxlength="8"
+              />
+              <div id="password-error" class="error"></div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="password-2">confirm password</label>
+              <input
+                class="password-2"
+                type="password"
+                name="password-2"
+                id="password-2"
+                minlength="4"
+                maxlength="8"
+                required
+              />
+              <div id="password2-error" class="error"></div>
+            </div>
+          </form>
+        </div>
+        <div class="buttons">
+          <button class="btn" form="action">Create account</button>
+
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const password1 = document.querySelector("#password");
+      const password2 = document.querySelector("#password-2");
+
+      const password1_err = document.querySelector("#password-error");
+
+      password2.addEventListener("input", function (e) {
+        if (password1.value !== password2.value) {
+          password1_err.textContent = "Passwords do not match";
+        } else {
+          password1_err.textContent = "";
+        }
+      });
+    </script>
+  </body>
+</html>
